@@ -1,0 +1,285 @@
+/*========================================================================================================
+================================ HOME-PAGE-CSS ===================================================================
+===========================================================================================================*/
+section {
+  @include full-width;
+}
+
+//mb20
+.mb20 {
+  margin-bottom: 20px;
+}
+
+
+//manufacturer-img
+.manufacturer-img {
+  position: relative;
+  overflow: hidden;
+
+  @include mq(max, 992) {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  img {
+    @include mq(min, 992) {
+      @include img-center(both);
+      min-width: fit-content;;
+    }
+  }
+}
+
+.prod-img {
+  position: relative;
+  overflow: hidden;
+
+  @include mq(max, 992) {
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  img {
+    @include mq(min, 992) {
+      @include img-center(both);
+      min-width: fit-content;
+      height: inherit;
+    }
+
+
+  }
+}
+
+//full-img
+.full-img{
+  margin-bottom: 20px;
+}
+
+//direct-manufacturer
+.direct-manufacturer {
+  padding: 60px 15px;
+  background: $lightPurple;
+  margin-bottom: 20px;
+
+
+  @include mq(min, 1599) {
+    padding: 60px;
+  }
+
+  @include min-max(1199, 1599) {
+    padding: 30px 25px;
+  }
+
+  @include mq(max, 768) {
+    padding: 30px 15px;
+  }
+
+  h4 {
+    @include roboto(black900);
+    color: $black;
+    font-size: 13px;
+    letter-spacing: 6.5px;
+    margin-bottom: 33px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    @include roboto(bold700);
+    font-size: 19px;
+    color: $black;
+    margin-bottom: 34px;
+    min-height: 42px;
+
+    @include mq(max, 992){
+      min-height: auto;
+      margin-bottom: 20px;
+    }
+
+    @include mq(max, 767){
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  }
+
+  p {
+    @include roboto(regular400);
+    color: lighten($black, 30%);
+    font-size: 15px;
+    margin-bottom: 20px;
+    letter-spacing: -0.1px;
+    line-height: 1.67;
+
+    @include mq(max, 767){
+      margin-bottom: 15px;
+    }
+  }
+
+  h2 {
+    @include roboto(regular400);
+    color: $black;
+    font-size: 44.39px;
+    margin-bottom: 35px;
+
+    .euro-icon {
+      font-size: 21px;
+      position: relative;
+      top: -24px;
+      left: -12px;
+    }
+  }
+
+  &-img {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    a {
+      @include img-center(both);
+
+      @include mq(max, 768) {
+        width: 92%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &-sec{
+    h3{
+      @include helvetical(light300);
+      font-size: 30px;
+      color: lighten($black,42%);
+
+      @include mq(min, 1599){
+        font-size: 39px;
+      }
+
+
+      @include mq(max, 992){
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+
+//btn-custom
+.btn-custom {
+  @include roboto(regular400);
+  color: $white;
+  font-size: 11.92px;
+  text-transform: uppercase;
+  padding: 11px 30px 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+
+
+  &.bg-yellow {
+    background: $yellow;
+
+    &:hover {
+      background: lighten($yellow, 10%);
+      color: $white;
+    }
+  }
+
+  &.bg-black {
+    background: $black;
+
+    &:hover {
+      background: lighten($black, 10%);
+      color: $white;
+    }
+  }
+}
+
+
+//rightBig-img
+.rightBig-img {
+  overflow: hidden;
+  position: relative;
+
+  @include mq(max, 992) {
+    height: auto;
+  }
+
+  img {
+    @include mq(min, 992) {
+      @include img-center(both);
+      min-width: fit-content;
+      width: 100%;
+    }
+  }
+}
+
+//manufacturer-details
+.manufacturer-details {
+  padding: 85px 0;
+
+  @include mq(max, 992){
+    padding: 30px 15px;
+    background: $white;
+    margin-bottom: 20px;
+  }
+
+  @include mq(max, 768){
+    padding: 30px;
+  }
+
+  p {
+    @include helvetical(light300);
+    font-size: 39px;
+    color: lighten($black, 58%);
+    line-height: 1.25;
+
+    @include mq(max, 992){
+      font-size: 35px;
+    }
+
+    @include mq(max, 768){
+      font-size: 28px;
+    }
+
+    @include mq(max, 425){
+      font-size: 24px;
+    }
+  }
+}
+
+
+//request-quote
+.request-quote {
+  position: relative;
+  height: 435px;
+  background: $lightPurple;
+  text-align: center;
+  padding: 0 15px;
+
+  @include mq(min, 1600) {
+    height: 583px;
+  }
+
+  @include mq(max, 992) {
+    margin-bottom: 20px;
+  }
+
+
+  .middle-center {
+    @include img-center(both);
+    width: 100%;
+    padding: 0 15px;
+  }
+
+
+  img {
+    margin: 0 auto 30px;
+  }
+
+  p {
+    @include roboto(regular400);
+    color: lighten($black, 30%);
+    font-size: 15px;
+    margin-bottom: 40px;
+    line-height: 1.67;
+  }
+}

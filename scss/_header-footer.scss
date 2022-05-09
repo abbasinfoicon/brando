@@ -1,0 +1,383 @@
+/*========================================================================================================
+================================ Header Scss ===================================================================
+===========================================================================================================*/
+header {
+  @include full-width;
+  padding: 30px 0 0;
+
+  @include mq(max, 767) {
+    padding-top: 15px;
+  }
+
+  @include mq(max, 425) {
+    padding-top: 25px;
+  }
+
+  //col-custom-6
+  .col-custom-6 {
+    @include mq(max, 767) {
+      position: absolute;
+      top: 15px;
+      right: 0;
+    }
+
+    @include mq(max, 425) {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      left: 0;
+
+      //service-client
+      .service-client {
+        text-align: center;
+      }
+    }
+  }
+}
+
+//logo-sec
+.logo-sec {
+  margin-bottom: 5px;
+
+  @include mq(max, 425){
+    margin-top: 15px;
+  }
+
+  a {
+    display: block;
+
+    img {
+      @include css3(mix-blend-mode, multiply);
+
+      @include mq(max, 425){
+        margin: 0 auto 15px;
+      }
+    }
+  }
+}
+
+//service-client
+.service-client {
+  text-align: right;
+  margin-bottom: 5px;
+
+  @include mq(max, 992) {
+    margin-bottom: 15px;
+  }
+
+  a {
+    @include roboto(regular400);
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $lgblack;
+    letter-spacing: 0.95px;
+  }
+}
+
+//mon-panier
+.mon-panier {
+  float: right;
+  text-align: right;
+  margin-bottom: 5px;
+
+  @include mq(max, 992) {
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  img {
+    @include mq(max, 992) {
+      display: inline-block;
+    }
+  }
+
+  a {
+    @include roboto(regular400);
+    color: $lgblack;
+    font-size: 10.62px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-right: 7px;
+    display: block;
+
+    @include mq(max, 992) {
+      margin-bottom: 5px;
+    }
+
+    img {
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      left: 7px;
+      @include css3(mix-blend-mode, multiply);
+    }
+
+    .curPointer {
+      margin-top: 12px;
+    }
+  }
+}
+
+//amazon-sec
+.amazon-sec {
+  margin-top: -5px;
+  float: right;
+  margin-bottom: 5px;
+
+  p {
+    @include roboto(regular400);
+    font-size: 14px;
+    color: $black;
+    letter-spacing: -0.2px;
+    margin-bottom: 7px;
+  }
+
+  a {
+    display: block;
+
+    img {
+      @include css3(mix-blend-mode, multiply);
+    }
+  }
+}
+
+//navbar-collapse
+.navbar-collapse {
+  @include mq(max, 767) {
+    background: $yellow;
+  }
+}
+
+//navbar-custom
+.navbar-custom {
+  margin-bottom: 0;
+  min-height: auto;
+
+  .navbar-nav {
+    li {
+      border-right: 1px solid $border;
+
+      @include mq(max, 767) {
+        border-right: none;
+        border-bottom: 1px solid #ea8e04;
+      }
+
+      &:last-child {
+        border: none;
+      }
+
+
+      a {
+        @include roboto(regular400);
+        color: $black;
+        font-size: 17px;
+        letter-spacing: -0.3px;
+        padding: 10px 18px;
+
+        &:hover, &:focus, &:active, &.active {
+          background: none;
+          border-color: transparent;
+          color: $yellow;
+
+          @include mq(max, 767) {
+            color: $black;
+          }
+        }
+
+        @include mq(max, 767) {
+          text-align: center;
+        }
+      }
+
+
+    }
+  }
+
+  .navbar-toggle {
+    background: $yellow;
+
+    .icon-bar {
+      background: $black;
+    }
+  }
+}
+
+//mediaFlex_row
+.mediaFlex_row {
+  @include mq(max, 767) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+//gide-padding-10
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+//navbar-header
+.navbar-header {
+  position: absolute;
+  z-index: 9;
+  top: -40px;
+  left: 15px;
+}
+
+//hamburger
+.hamburger {
+  overflow: visible;
+  margin: 0;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  display: none;
+  width: 20px;
+
+  @include mq(max, 767) {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  .hamburger-box {
+    position: relative;
+    display: block;
+    height: 16px;
+
+    .hamburger-inner {
+      background-color: $black;
+      position: absolute;
+      width: 21px;
+      height: 2px;
+      transition-property: transform;
+      border-radius: 4px;
+      top: auto;
+      bottom: 0;
+      transition-delay: 0.13s;
+      transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      transition-duration: 0.13s;
+      left: -2px;
+
+      &:after, &:before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 2px;
+        border-radius: 4px;
+        background-color: $black;
+      }
+
+      &:after {
+        top: -12px;
+        transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+        opacity 0.1s linear;
+        bottom: -10px;
+      }
+
+      &:before {
+        top: -6px;
+        transition: top 0.12s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s,
+        transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        width: 13px;
+        right: 0;
+      }
+    }
+  }
+
+  &.is-active {
+    .hamburger-inner {
+      transition-delay: 0.22s;
+      transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translate3d(0, -6px, 0) rotate(-45deg);
+
+      &:before {
+        top: 0;
+        transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.16s,
+        transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.25s;
+        transform: rotate(-90deg);
+        width: 21px;
+      }
+
+      &:after {
+        top: 0;
+        transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+        opacity 0.1s linear 0.22s;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+
+/*========================================================================================================
+================================ Footer Scss ===================================================================
+===========================================================================================================*/
+footer {
+  @include full-width;
+}
+
+//footer-bg
+.footer-bg {
+  padding: 60px;
+  background: $gray;
+
+  @include mq(max, 768) {
+    padding: 50px 30px;
+    text-align: center;
+  }
+
+  @include mq(max, 320) {
+    padding: 30px 15px;
+    text-align: center;
+  }
+}
+
+//footer-menu
+.footer-menu {
+  margin-bottom: 30px;
+
+  @include mq(min, 992) {
+    margin-bottom: 50px;
+  }
+
+
+  h3 {
+    @include opensans(bold700);
+    color: $black;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    @include opensans(regular400);
+    color: $black;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 8px;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+//copyright
+.copyright {
+  p {
+    @include opensans(light300);
+    color: #757575;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+  }
+}

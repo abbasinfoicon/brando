@@ -1,0 +1,53 @@
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap";
+
+@font-face {
+  font-family: 'Roboto-regular';
+  src: url('#{$fontPath}/Roboto-Regular.eot');
+  src: url('#{$fontPath}/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/Roboto-Regular.woff2') format('woff2'),
+  url('#{$fontPath}/Roboto-Regular.woff') format('woff'),
+  url('#{$fontPath}/Roboto-Regular.ttf')  format('truetype'),
+  url('#{$fontPath}/Roboto-Regular.svg#Roboto') format('svg');
+}
+
+@font-face {
+  font-family: 'Roboto-bold';
+  src: url('#{$fontPath}/Roboto-Bold.eot');
+  src: url('#{$fontPath}/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontPath}/Roboto-Bold.woff2') format('woff2'),
+  url('#{$fontPath}/Roboto-Bold.woff') format('woff'),
+  url('#{$fontPath}/Roboto-Bold.ttf')  format('truetype'),
+  url('#{$fontPath}/Roboto-Bold.svg#Roboto') format('svg');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('#{$fontPath}/Helvetica Neue LT Light'),
+  url('#{$fontPath}/Helvetica Neue LT 45 Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('#{$fontPath}/Helvetica Neue LT Bold'),
+  url('#{$fontPath}/Helvetica Neue LT 75 Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('#{$fontPath}h/Helvetica Neue LT Medium'),
+  url('#{$fontPath}/Helvetica Neue LT 65 Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('#{$fontPath}/Helvetica Neue LT Black'),
+  url('#{$fontPath}/Helvetica Neue LT 95 Black.woff') format('woff');
+}

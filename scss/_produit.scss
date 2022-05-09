@@ -1,0 +1,113 @@
+/*========================================================================================================
+================================ produit Scss ===================================================================
+===========================================================================================================*/
+//center-content
+.center-content {
+  text-align: center;
+
+  h3 {
+    a {
+      text-decoration: underline;
+      @include roboto(bold700);
+      font-size: 17px;
+      color: $black;
+    }
+  }
+
+  ul {
+    margin-bottom: 35px;
+
+    li {
+      display: inline-block;
+
+      @include mq(min, 1500) {
+        margin-right: 15px;
+      }
+
+      @include mq(max, 768) {
+        display: block;
+      }
+
+      a, select {
+        @include roboto(regular400);
+        font-size: 16px;
+        color: lighten($black, 22%);
+        @include border-radius(4);
+        padding: 10px 23px;
+        background: $white;
+        @include box-shadow(0 0 6px rgba(32, 33, 36, .28));
+        display: block;
+        margin-bottom: 10px;
+        border: none;
+
+        @include mq(max, 768) {
+          width: 100%;
+        }
+      }
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+
+        &:active, &:focus, &:hover{
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+//col-custom-4
+.col-custom-4 {
+  @include mq(min, 992) {
+    width: 37.333333%;
+  }
+}
+
+//col-custom-8
+.col-custom-8 {
+  @include mq(min, 992) {
+    width: 62.666667%;
+  }
+}
+
+
+//title-sec
+.title-sec {
+  text-align: center;
+  padding: 65px 15px;
+  border: 1px solid $border;
+  margin-bottom: 10px;
+
+  @include mq(max, 768){
+    padding: 30px 15px;
+  }
+
+  h3 {
+    @include helvetical(light300);
+    font-size: 39px;
+    color: lighten($black,42%);
+    position: relative;
+    display: inline-block;
+
+    @include mq(max, 768){
+      font-size: 24px;
+    }
+
+    @include mq(max, 375){
+      font-size: 20px;
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      height: 3px;
+      width: 100%;
+      background: #be987c;
+    }
+  }
+}
